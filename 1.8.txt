@@ -1,0 +1,25 @@
+Ans 1.8:
+
+(define (cbrt-iter guess x)
+  (if (good-enough? guess x)
+      guess
+      (cbrt-iter (improve guess x)
+                 x)))
+
+A guess is improved by :
+
+(define (improve guess x)
+  (/ (+ (/ x (square y)) (* 2 y)) 3)
+
+
+(define (good-enough? guess x)
+  (< (abs (- (cube guess) x)) 0.001))
+
+(define (square x) (* x x))
+
+(define (cube x) (* x x x))
+
+Finally, we need a way to get started. For instance, we can always guess that the cube root of any number is 1:23
+
+(define (cbrt x)
+  (cbrt-iter 1.0 x))

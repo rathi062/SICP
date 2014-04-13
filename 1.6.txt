@@ -1,0 +1,10 @@
+Ans 1.6:
+
+(define (sqrt-iter guess x)
+  (new-if (good-enough? guess x)
+          guess
+          (sqrt-iter (improve guess x)
+                     x)))
+
+
+This new-if function will work properly as lisp follow applicative order of evaluation and  result of new-if will be same as “if”.  
