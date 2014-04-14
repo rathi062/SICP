@@ -1,0 +1,16 @@
+Ans 1.12:
+
+Pascal's triangle by means of a recursive process.
+
+(define (pascal n)
+  (pascal-row-iter 1 n)
+
+(define (pascal-row-iter r n))
+   (if (> n r))
+	(pascal-column-iter 1 r)
+   )
+
+(define (pascal-column-iter c r))
+    (cond (and (= c 1) (= r 1) 1)
+	  ((> c r) 0)
+	  (else (+ (pascal-column-iter c-1 r-1) (pascal-column-iter c r-1))))
