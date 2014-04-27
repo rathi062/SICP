@@ -1,0 +1,4 @@
+Ans 1.14 : 
+ 
+Orde of growth of steps : O(n.c)
+Orde of growth of space : O(1)

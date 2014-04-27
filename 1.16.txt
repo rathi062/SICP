@@ -1,0 +1,11 @@
+Ans 1.16.
+
+(define (fast-expt a b n cnt)
+  (cond ((= n 0) 1)
+        ((<= cnt n) (fast-expt square(a) b (- n cnt) (* cnt 2))))
+        (else (* a (fast-expt b b (- n 1) 1)))))
+
+
+
+
+
